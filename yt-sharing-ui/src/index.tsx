@@ -1,12 +1,6 @@
-/**
- * index.tsx
- *
- * This is the entry file for the application, only setup and boilerplate
- * code.
- */
-
 import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
+import './styles/main.css';
 
 import * as React from 'react';
 import ReactDOM from 'react-dom/client';
