@@ -7,9 +7,18 @@ const prettierOptions = JSON.parse(
 
 module.exports = {
   extends: ['react-app', 'prettier'],
-  plugins: ['prettier'],
+  plugins: ['prettier', 'simple-import-sort', 'unused-imports'],
   rules: {
     'prettier/prettier': ['error', prettierOptions],
+    'simple-import-sort/imports': 'error', // Import configuration for `eslint-plugin-simple-import-sort`,
+    'simple-import-sort/exports': 'error', // Export configuration for `eslint-plugin-simple-import-sort`,
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'warn',
+      {
+        argsIgnorePattern: '^_',
+      },
+    ],
   },
   overrides: [
     {
